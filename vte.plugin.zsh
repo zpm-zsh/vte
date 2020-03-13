@@ -21,5 +21,5 @@ _zpm__vte_osc7 () {
 }
 
 autoload -Uz add-zsh-hook
-add-zsh-hook chpwd __vte_osc7
-__vte_osc7
+add-zsh-hook chpwd _zpm__vte_osc7
+_zpm__vte_osc7
