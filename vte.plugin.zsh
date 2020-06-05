@@ -17,10 +17,10 @@ _zpm__vte_urlencode() (
 )
 
 _zpm__vte_osc7 () {
-  printf "\033]7;file://%s%s\033\\" "${HOSTNAME:-$HOST}" "$(_zpm__vte_urlencode "${PWD}")"
-  printf "\033]0;%s@%s:%s\033\\" "${USER}" "${HOSTNAME:-$HOST}" "$(_zpm__vte_urlencode "${PWD}")"
+  printf "\033]7;file://%s%s\033\\" "${HOST:-$HOSTNAME}" "$(_zpm__vte_urlencode "${PWD}")"
 }
 
 autoload -Uz add-zsh-hook
 add-zsh-hook chpwd _zpm__vte_osc7
 _zpm__vte_osc7
+
